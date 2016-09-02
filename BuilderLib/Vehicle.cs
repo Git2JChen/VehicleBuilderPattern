@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace PatternApp
+namespace BuilderLib
 {
     public class Vehicle
     {

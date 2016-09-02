@@ -1,4 +1,4 @@
-﻿namespace PatternApp
+﻿namespace BuilderLib
 {
     public abstract class VehicleBuilder
     {
