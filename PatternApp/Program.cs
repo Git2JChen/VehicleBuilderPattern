@@ -10,7 +10,22 @@ namespace PatternApp
     {
         static void Main(string[] args)
         {
+            VehicleBuilder vehicleBuilder;
+            var factory = new Factory();
 
+            vehicleBuilder = new ScooterBuilder();
+            factory.Construct(vehicleBuilder);
+            vehicleBuilder.vehicle.Show();
+
+            vehicleBuilder = new MotorCycleBuilder();
+            factory.Construct(vehicleBuilder);
+            vehicleBuilder.vehicle.Show();
+
+            vehicleBuilder = new CarVehicleBuilder();
+            factory.Construct(vehicleBuilder);
+            vehicleBuilder.vehicle.Show();
+
+            Console.ReadKey();
         }
     }
 
@@ -84,7 +99,7 @@ namespace PatternApp
 
         public override void BuildColour()
         {
-            vehicle["colour"] = "red";
+            vehicle["colour"] = "Red";
         }
     }
 
@@ -117,7 +132,7 @@ namespace PatternApp
 
         public override void BuildColour()
         {
-            vehicle["doors"] = "White";
+            vehicle["colour"] = "White";
         }
     }
 
